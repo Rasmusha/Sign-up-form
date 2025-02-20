@@ -1,60 +1,24 @@
+/* Global styles */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Norse';
+    src: url('fonts/Norse-Bold.otf') format('opentype');
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #0d0d0c;
+    font-family: 'Roboto', sans-serif;
 }
 
-.text {
-    max-width: 50%;
-}
-
-.credits {
-    position: absolute;
-    bottom: 1px;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 100%;
-
-}
-
-.logo img {
-    height: 150px;
-  }
-
+/* Layout and Containers */
 .container {
     display: flex;
     height: 100vh;
     width: 100vw;
-
-}
-
-.inputs > div {
-    display: flex;
-    flex-direction:row;
-    column-gap: 84px;
-    margin-bottom: 18px
-}
-
-.credits {
-    color: white;
-}
-
-form {
-    background-color: white;
-    margin-bottom: 16px;
-    padding: 16px;
-    border-radius: 8px; 
-    padding-left: 40px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .first-section {
@@ -68,24 +32,102 @@ form {
     width: 40vw;
 }
 
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;  /* lisää hieman tilaa labelin ja inputin väliin */
-}
-
 .second-section {
     background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 60vw;
-    
+}
+
+/* Typography */
+.text {
+    max-width: 70%;
+}
+
+.text-section {
+    padding-bottom: 50px;
+    font-size: 25px;
 }
 
 .text-section, .footer {
     padding-left: 40px;
 }
 
+.credits {
+    position: absolute;
+    bottom: 1px;
+    font-size: 13px;
+    color: white;
+}
 
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    font-family: 'Norse', sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+.logo img {
+    height: 150px;
+}
+
+/* Form Styling */
+form {
+    background-color: white;
+    margin-bottom: 16px;
+    padding: 16px 16px 16px 40px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputs > div {
+    display: flex;
+    flex-direction: row;
+    column-gap: 84px;
+    margin-bottom: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 25%;
+}
+
+/* Input Fields */
+input {
+    padding: 6px;
+    border-radius: 2px;
+    box-shadow: inset 1px 1px 3px #ccc;
+    border: 2px solid #ccc;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+/* Buttons */
+button {
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 0 15px 0;
+    margin-bottom: 10px;
+    width: 15%;
+    background-color: #384444;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+}
